@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js Project
 
-## Getting Started
+This project uses Next.js and React to create a multi-page web application.
 
-First, run the development server:
+## Project Structure
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The project consists of several files that define the different parts of the application:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### _app.js
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+This is the main component of the application. It imports the necessary styles and renders the current page component.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### about.js
 
-## Learn More
+This is the "About" page. It contains a link to return to the home page.
 
-To learn more about Next.js, take a look at the following resources:
+### index.js
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This is the home page of the application. It contains links to the other pages of the application.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### posts.js
 
-## Deploy on Vercel
+This is the "Posts" page. It uses the `getServerSideProps` function to get data from the server when rendering the page. It displays a list of posts obtained from an external API.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### next.config.js
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This file configures the webpack module system to correctly resolve the aliases of the page routes.
+
+## How it Works
+
+When you access the application, the home page is displayed. From there, you can navigate to the other pages using the provided links. The "Posts" page gets data from the server each time it loads, displaying a list of posts.
+
+## How to Run the Project
+
+1. **Install dependencies**: First, you need to install the project dependencies. You can do this with the following command:
+
+## How to Run the Project
+
+To run this project, follow these steps:
+
+1. Clone the repository.
+2. Navigate to the project directory.
+3. Run `npm install` to install dependencies.
+3. Run `next dev` to start the application.
+
+Open <http://localhost:3000> to view it in the browser.
