@@ -1,6 +1,11 @@
 # Next.js Project
 
-This project uses Next.js and React to create a multi-page web application.
+This project is a Next.js application that serves as a multi-page web application. Here's a summary of what each page does:
+
+- **Home Page (`index.js`)**: This is the first page you see when you access the application. It contains links to the other pages of the application.
+- **About Page (`about.js`)**: This page provides information about the author of the application.
+- **Posts Page (`posts.js`)**: This page displays a list of posts obtained from an external API. Each time the page is loaded, data is fetched from the server using the `getServerSideProps` function.
+
 
 ## Project Structure
 
@@ -30,15 +35,13 @@ This file configures the webpack module system to correctly resolve the aliases 
 
 When you access the application, the home page is displayed. From there, you can navigate to the other pages using the provided links. The "Posts" page gets data from the server each time it loads, displaying a list of posts.
 
-## How to Run the Project
-
-1. **Install dependencies**: First, you need to install the project dependencies. You can do this with the following command:
 
 ## How to Run the Project
 
 To run this project, follow these steps:
 
 1. Clone the repository.
+1. Make sure you have Node.js and Next.js installed on your system.
 2. Navigate to the project directory.
 3. Run `npm install` to install dependencies.
 3. Run `next dev` to start the application.
